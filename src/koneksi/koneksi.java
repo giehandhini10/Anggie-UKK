@@ -9,17 +9,19 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+        
 /**
  *
- * @author Hadi Firmansyah
+ * @author Anggie Sri Handhini
  */
 public class koneksi {
     Connection connect;
     Statement sttmnt;
     ResultSet rslt;
-    private static Connection koneksi;  
+    private static Connection koneksi;
     public static Connection getKoneksi(){
-        try{
+        try {
             String url = "jdbc:mysql://localhost:3306/aplikasi_kasir";
             String user = "root";
             String password = "";
@@ -28,13 +30,9 @@ public class koneksi {
             koneksi = DriverManager.getConnection(url,user,password);
             System.out.println("Koneksi berhasil");
             
-        }catch(Exception e){
+        }catch (Exception e) {
             System.out.println("Koneksi Gagal");
         }return koneksi;
-    
     }
- 
     
-   
-//TUTUP CLASS KONEKSI
 }
